@@ -411,48 +411,48 @@ import java.util.*;
 //     }
 // }
 // BUCKET SORT
-// public class sorting{
-//     public static void bucketSort(float arr[]){
-//         int n = arr.length;
-//         // Buckets
-//         @SuppressWarnings("unchecked")
-//         ArrayList<Float>[] buckets =new ArrayList[n];
-//         // Create empty bucktes
-//         for(int i=0;i<n;i++){
-//             buckets[i] = new ArrayList<Float>();
-//         }
-//         // Add elements into our buckets
-//         for(int i=0;i<n;i++){
-//             int bucketIndex = (int)arr[i]*n;
-//             buckets[bucketIndex].add(arr[i]);
-//         }
-//         // Sort each bucket individually
-//         for(int i=0;i<buckets.length;i++){
-//             Collections.sort(buckets[i]);
-//         }
-//         // Merge all bucktes to get final sorted array
-//         int index = 0;
-//         for(int i=0;i<buckets.length;i++){
-//             ArrayList<Float> currBucket = buckets[i];
-//             for(int j=0;j<currBucket.size();j++){
-//                 arr[index++] = currBucket.get(j);
-//             }
-//         }
-//     }
-//     public static void main(String[] args) {
-//         Scanner sc = new Scanner(System.in);
-//         System.out.print("Enter n : ");
-//         int n = sc.nextInt();
-//         System.out.print("Enter arrray : ");
-//         float arr[] = new float[n];
-//         for(int i=0;i<n;i++){
-//             arr[i] = sc.nextFloat();
-//         }
-//         bucketSort(arr);
-//         for(float val:arr){
-//             System.out.print(val+" ");
-//         }
-//         sc.close();
-//     }
-// }
+public class sorting{
+    public static void bucketSort(float arr[]){
+        int n = arr.length;
+        // Buckets
+        @SuppressWarnings("unchecked")
+        ArrayList<Float>[] buckets =new ArrayList[n];
+        // Create empty bucktes
+        for(int i=0;i<n;i++){
+            buckets[i] = new ArrayList<Float>();
+        }
+        // Add elements into our buckets
+        for(int i=0;i<n;i++){
+            int bucketIndex = (int)arr[i]*n;
+            buckets[bucketIndex].add(arr[i]);
+        }
+        // Sort each bucket individually
+        for(int i=0;i<buckets.length;i++){
+            Collections.sort(buckets[i]);
+        }
+        // Merge all bucktes to get final sorted array
+        int index = 0;
+        for(int i=0;i<buckets.length;i++){
+            ArrayList<Float> currBucket = buckets[i];
+            for(int j=0;j<currBucket.size();j++){
+                arr[index++] = currBucket.get(j);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter n : ");
+        int n = sc.nextInt();
+        System.out.print("Enter arrray : ");
+        float arr[] = new float[n];
+        for(int i=0;i<n;i++){
+            arr[i] = sc.nextFloat();
+        }
+        bucketSort(arr);
+        for(float val:arr){
+            System.out.print(val+" ");
+        }
+        sc.close();
+    }
+}
    
